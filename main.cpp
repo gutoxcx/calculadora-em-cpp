@@ -37,6 +37,7 @@ int main() {
 		cout << "[ / ] Divisão" << endl;
 		
 		cin >> operacao; 
+
 		cin >> n1;
 		cin >> n2;
 		
