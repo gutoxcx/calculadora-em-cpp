@@ -1,5 +1,8 @@
 #include <iostream>
+#include <string>
+
 using namespace std;
+// if, while, do while, for;
 
 int soma(double n1, double n2) {
 	double resultado = n1 + n2;
@@ -24,15 +27,33 @@ double resto(int n1, int n2) {
 
 int main() {
 	double n1, n2;
-	
-	cout << "digite seus numeros, n1 e n2: ";
-	cin >> n1;
-	cin >> n2;
-	
-	cout << "Soma: " << soma(n1, n2) << endl;
-	cout << "Subtração: " << subtracao(n1, n2) << endl;
-	cout << "Multiplicação: " << multiplicacao(n1, n2) << endl;
-	cout << "Divisão: " << divisao(n1, n2) << endl;
-	cout << "Resto: " << resto(n1, n2) << endl;
-}
+	char operacao;
+	while (true) {
+		cout << "===== BEM-VINDO(A) CALCULADORA =====" << endl;
+		cout << "Selecione uma operação: " << endl;
+		cout << "[ + ] Adição" << endl;
+		cout << "[ - ] Substração" << endl;
+		cout << "[ * ] Multiplicação" << endl;
+		cout << "[ / ] Divisão" << endl;
+		
+		cin >> operacao; 
+		cin >> n1;
+		cin >> n2;
+		
+		if (operacao == '+'){
+			cout << "=== RESULTADO: " << soma(n1, n2) << endl;
+		} else if (operacao == '-') {
+			cout << "=== RESULTADO: " << subtracao(n1, n2) << endl;
+		} else if (operacao == '*'){
+			cout << "Multiplicação: " << multiplicacao(n1, n2) << endl;
+		} else if (operacao == '/') {
+			cout << "Divisão: " << divisao(n1, n2) << endl;
+		} else if (operacao == '%') {
+			cout << "Resto: " << resto(n1, n2) << endl;
+		} else {
+			cout << "! Digite uma operação válida.";
+		}
+				
 
+	}
+}
