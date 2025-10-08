@@ -38,6 +38,7 @@ int main() {
 		
 		cin >> operacao; 
 
+		cout << "Digite o n1 e o n2: " << endl;
 		cin >> n1;
 		cin >> n2;
 		
@@ -54,7 +55,8 @@ int main() {
 		} else {
 			cout << "! Digite uma operação válida.";
 		}
-				
+		cout << "	" << endl;
+		return 0;	
 
 	}
 }
